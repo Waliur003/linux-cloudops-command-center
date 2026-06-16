@@ -1,0 +1,258 @@
+====================================
+   Linux CloudOps Full Report
+   Generated: Tue Jun 16 03:07:35 UTC 2026
+====================================
+
+######## SYSTEM HEALTH ########
+====================================
+      Linux System Health Check
+====================================
+
+[1] Hostname:
+ip-172-31-16-231
+
+[2] Current User:
+ubuntu
+
+[3] System Uptime and Load:
+ 03:07:35 up 21 min,  1 user,  load average: 0.00, 0.00, 0.00
+
+[4] Memory Usage:
+               total        used        free      shared  buff/cache   available
+Mem:           908Mi       322Mi       302Mi       2.7Mi       394Mi       585Mi
+Swap:             0B          0B          0B
+
+[5] Disk Usage:
+Filesystem       Size  Used Avail Use% Mounted on
+/dev/root        6.7G  2.1G  4.6G  32% /
+tmpfs            455M     0  455M   0% /dev/shm
+tmpfs            182M  888K  181M   1% /run
+efivarfs         128K  3.1K  120K   3% /sys/firmware/efi/efivars
+tmpfs            455M     0  455M   0% /tmp
+none             1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none             1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+/dev/nvme0n1p13  989M   96M  827M  11% /boot
+/dev/nvme0n1p15  105M  6.3M   99M   7% /boot/efi
+none             1.0M     0  1.0M   0% /run/credentials/systemd-networkd.service
+none             1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+none             1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyS0.service
+tmpfs             91M  8.0K   91M   1% /run/user/1000
+
+[6] CPU Information:
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Model name:                              Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+NUMA node0 CPU(s):                       0,1
+
+[7] Top 5 Memory-Consuming Processes:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root        1832  0.6  5.0 488652 47232 ?        Ssl  03:01   0:02 /usr/libexec/fwupd/fwupd
+root         665  0.0  4.3 2098940 40796 ?       Ssl  02:45   0:00 /usr/lib/snapd/snapd
+root         745  0.0  3.4 126208 32084 ?        Ssl  02:45   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         660  0.0  3.2  46808 29824 ?        Ss   02:45   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root        1077  0.0  2.2 1759024 20728 ?       Ssl  02:45   0:00 /snap/amazon-ssm-agent/13009/amazon-ssm-agent
+
+[8] Top 5 CPU-Consuming Processes:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root        1832  0.6  5.0 488652 47232 ?        Ssl  03:01   0:02 /usr/libexec/fwupd/fwupd
+root           1  0.1  1.7  25412 16136 ?        Ss   02:45   0:02 /sbin/init
+root         665  0.0  4.3 2098940 40796 ?       Ssl  02:45   0:00 /usr/lib/snapd/snapd
+root        1077  0.0  2.2 1759024 20728 ?       Ssl  02:45   0:00 /snap/amazon-ssm-agent/13009/amazon-ssm-agent
+root         199  0.0  1.4  39028 13692 ?        Ss   02:45   0:00 /usr/lib/systemd/systemd-udevd
+
+Health check completed.
+
+######## SECURITY AUDIT ########
+====================================
+        Linux Security Audit
+====================================
+
+[1] Current Logged-In Users:
+
+[2] Recent Login History:
+
+[3] Users With Sudo Access:
+sudo:x:27:ubuntu
+
+[4] Failed SSH Login Attempts:
+2026-06-16T02:54:46.570311+00:00 ip-172-31-16-231 sudo: ubuntu : TTY=/dev/pts/0 ; PWD=/home/ubuntu/linux-cloudops-command-center ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
+2026-06-16T02:54:46.581788+00:00 ip-172-31-16-231 sudo: ubuntu : TTY=/dev/pts/0 ; PWD=/home/ubuntu/linux-cloudops-command-center ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
+2026-06-16T03:07:35.385075+00:00 ip-172-31-16-231 sudo: ubuntu : TTY=/dev/pts/0 ; PWD=/home/ubuntu/linux-cloudops-command-center ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
+
+[5] Count of Failed SSH Attempts:
+4
+
+[6] Open Listening Ports:
+Netid State  Recv-Q Send-Q      Local Address:Port Peer Address:PortProcess                                                 
+udp   UNCONN 0      0              127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=192,fd=18))              
+udp   UNCONN 0      0           127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=192,fd=16))              
+udp   UNCONN 0      0      172.31.16.231%ens5:68        0.0.0.0:*    users:(("systemd-network",pid=593,fd=32))              
+udp   UNCONN 0      0               127.0.0.1:323       0.0.0.0:*    users:(("chronyd",pid=729,fd=4))                       
+udp   UNCONN 0      0                   [::1]:323          [::]:*    users:(("chronyd",pid=729,fd=5))                       
+tcp   LISTEN 0      4096        127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=192,fd=17))              
+tcp   LISTEN 0      4096           127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=192,fd=19))              
+tcp   LISTEN 0      4096              0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=1012,fd=3),("systemd",pid=1,fd=215))
+tcp   LISTEN 0      4096                 [::]:22           [::]:*    users:(("sshd",pid=1012,fd=4),("systemd",pid=1,fd=216))
+
+[7] World-Writable Files Check:
+
+[8] SUID Files Check:
+/usr/bin/ntfs-3g
+/usr/bin/su
+/usr/bin/gpasswd
+/usr/bin/sudo.ws
+/usr/bin/newgrp
+/usr/bin/mount
+/usr/bin/chfn
+/usr/bin/fusermount3
+/usr/bin/passwd
+/usr/bin/chsh
+
+Security audit completed.
+
+######## NETWORK DIAGNOSTIC ########
+====================================
+       Linux Network Diagnostic
+====================================
+
+[1] IP Address Information:
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: ens5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc mq state UP group default qlen 1000
+    link/ether 0a:ff:dc:53:f5:09 brd ff:ff:ff:ff:ff:ff
+    altname enp0s5
+    altname enx0affdc53f509
+    inet 172.31.16.231/20 metric 100 brd 172.31.31.255 scope global dynamic ens5
+       valid_lft 2297sec preferred_lft 2297sec
+    inet6 fe80::8ff:dcff:fe53:f509/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+
+[2] Routing Table:
+default via 172.31.16.1 dev ens5 proto dhcp src 172.31.16.231 metric 100 
+172.31.0.2 via 172.31.16.1 dev ens5 proto dhcp src 172.31.16.231 metric 100 
+172.31.16.0/20 dev ens5 proto kernel scope link src 172.31.16.231 metric 100 
+172.31.16.1 dev ens5 proto dhcp scope link src 172.31.16.231 metric 100 
+
+[3] DNS Lookup for google.com:
+
+; <<>> DiG 9.20.18-1ubuntu2.1-Ubuntu <<>> google.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 2258
+;; flags: qr rd ra; QUERY: 1, ANSWER: 6, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;google.com.                    IN      A
+
+;; ANSWER SECTION:
+google.com.             189     IN      A       192.178.155.113
+google.com.             189     IN      A       192.178.155.100
+google.com.             189     IN      A       192.178.155.139
+google.com.             189     IN      A       192.178.155.102
+google.com.             189     IN      A       192.178.155.101
+google.com.             189     IN      A       192.178.155.138
+
+;; Query time: 1 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+;; WHEN: Tue Jun 16 03:07:35 UTC 2026
+;; MSG SIZE  rcvd: 135
+
+
+[4] Ping Test:
+PING google.com (192.178.155.102) 56(84) bytes of data.
+64 bytes from yuiadrs-in-f102.1e100.net (192.178.155.102): icmp_seq=1 ttl=105 time=2.11 ms
+64 bytes from yuiadrs-in-f102.1e100.net (192.178.155.102): icmp_seq=2 ttl=105 time=2.16 ms
+64 bytes from yuiadrs-in-f102.1e100.net (192.178.155.102): icmp_seq=3 ttl=105 time=1.97 ms
+64 bytes from yuiadrs-in-f102.1e100.net (192.178.155.102): icmp_seq=4 ttl=105 time=2.11 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 1.974/2.086/2.159/0.068 ms
+
+[5] HTTP Header Test:
+HTTP/2 301 
+location: https://www.google.com/
+content-type: text/html; charset=UTF-8
+content-security-policy-report-only: object-src 'none';base-uri 'self';script-src 'nonce-LAbFm-qNiX4BxGfKzGfjiw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+date: Tue, 16 Jun 2026 03:07:38 GMT
+expires: Thu, 16 Jul 2026 03:07:38 GMT
+cache-control: public, max-age=2592000
+server: gws
+content-length: 220
+x-xss-protection: 0
+x-frame-options: SAMEORIGIN
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+
+[6] Open Listening Ports:
+Netid State  Recv-Q Send-Q      Local Address:Port Peer Address:PortProcess                                                 
+udp   UNCONN 0      0              127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=192,fd=18))              
+udp   UNCONN 0      0           127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=192,fd=16))              
+udp   UNCONN 0      0      172.31.16.231%ens5:68        0.0.0.0:*    users:(("systemd-network",pid=593,fd=32))              
+udp   UNCONN 0      0               127.0.0.1:323       0.0.0.0:*    users:(("chronyd",pid=729,fd=4))                       
+udp   UNCONN 0      0                   [::1]:323          [::]:*    users:(("chronyd",pid=729,fd=5))                       
+tcp   LISTEN 0      4096        127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=192,fd=17))              
+tcp   LISTEN 0      4096           127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=192,fd=19))              
+tcp   LISTEN 0      4096              0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=1012,fd=3),("systemd",pid=1,fd=215))
+tcp   LISTEN 0      4096                 [::]:22           [::]:*    users:(("sshd",pid=1012,fd=4),("systemd",pid=1,fd=216))
+
+Network diagnostic completed.
+
+######## SERVICE MONITOR: SSH ########
+====================================
+          Service Monitor
+====================================
+
+Checking service: ssh
+
+[1] Service Status:
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
+    Drop-In: /usr/lib/systemd/system/ssh.service.d
+             └─ec2-instance-connect.conf
+     Active: active (running) since Tue 2026-06-16 02:45:54 UTC; 21min ago
+ Invocation: 7821a3d7d244426a9b774d0a8d46dbfa
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 1012 (sshd)
+      Tasks: 1 (limit: 627)
+     Memory: 7.4M (peak: 14.5M)
+        CPU: 1.473s
+     CGroup: /system.slice/ssh.service
+             └─1012 "sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %u %f -o AuthorizedKeysCommandUser ec2-instance-connect [listener] 0 of 10-100 startups"
+
+Jun 16 02:45:54 ip-172-31-16-231 sshd[1012]: Server listening on 0.0.0.0 port 22.
+Jun 16 02:45:54 ip-172-31-16-231 sshd[1012]: Server listening on :: port 22.
+Jun 16 02:45:54 ip-172-31-16-231 systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Jun 16 02:46:00 ip-172-31-16-231 ec2-instance-connect[1240]: Querying EC2 Instance Connect keys for matching fingerprint: SHA256:RsmXIXsjtiX/z51dMzWo2XffwX7EGQRDDeIArlvoorc
+Jun 16 02:46:01 ip-172-31-16-231 ec2-instance-connect[1389]: Querying EC2 Instance Connect keys for matching fingerprint: SHA256:RsmXIXsjtiX/z51dMzWo2XffwX7EGQRDDeIArlvoorc
+Jun 16 02:46:02 ip-172-31-16-231 ec2-instance-connect[1421]: Providing ssh key from EC2 Instance Connect with fingerprint: SHA256:RsmXIXsjtiX/z51dMzWo2XffwX7EGQRDDeIArlvoorc, request-id: 6f39044d-6798-4607-807e-64ebdbfe265f, for IAM principal: arn:aws:iam::418272769771:user/SunWaliur
+Jun 16 02:46:02 ip-172-31-16-231 sshd-session[1131]: Accepted publickey for ubuntu from 18.206.107.28 port 15303 ssh2: ED25519 SHA256:RsmXIXsjtiX/z51dMzWo2XffwX7EGQRDDeIArlvoorc
+Jun 16 02:46:02 ip-172-31-16-231 sshd-session[1131]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Jun 16 03:02:11 ip-172-31-16-231 sshd-session[1862]: banner exchange: Connection from 198.211.115.98 port 42504: invalid format
+Jun 16 03:02:11 ip-172-31-16-231 sshd-session[1863]: banner exchange: Connection from 198.211.115.98 port 42508: invalid format
+
+[2] Recent Service Logs:
+Jun 16 02:45:54 ip-172-31-16-231 systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Jun 16 02:45:54 ip-172-31-16-231 sshd[1012]: Server listening on 0.0.0.0 port 22.
+Jun 16 02:45:54 ip-172-31-16-231 sshd[1012]: Server listening on :: port 22.
+Jun 16 02:45:54 ip-172-31-16-231 systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Jun 16 02:46:00 ip-172-31-16-231 ec2-instance-connect[1240]: Querying EC2 Instance Connect keys for matching fingerprint: SHA256:RsmXIXsjtiX/z51dMzWo2XffwX7EGQRDDeIArlvoorc
+Jun 16 02:46:01 ip-172-31-16-231 ec2-instance-connect[1389]: Querying EC2 Instance Connect keys for matching fingerprint: SHA256:RsmXIXsjtiX/z51dMzWo2XffwX7EGQRDDeIArlvoorc
+Jun 16 02:46:02 ip-172-31-16-231 ec2-instance-connect[1421]: Providing ssh key from EC2 Instance Connect with fingerprint: SHA256:RsmXIXsjtiX/z51dMzWo2XffwX7EGQRDDeIArlvoorc, request-id: 6f39044d-6798-4607-807e-64ebdbfe265f, for IAM principal: arn:aws:iam::418272769771:user/SunWaliur
+Jun 16 02:46:02 ip-172-31-16-231 sshd-session[1131]: Accepted publickey for ubuntu from 18.206.107.28 port 15303 ssh2: ED25519 SHA256:RsmXIXsjtiX/z51dMzWo2XffwX7EGQRDDeIArlvoorc
+Jun 16 02:46:02 ip-172-31-16-231 sshd-session[1131]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Jun 16 03:02:11 ip-172-31-16-231 sshd-session[1862]: banner exchange: Connection from 198.211.115.98 port 42504: invalid format
+Jun 16 03:02:11 ip-172-31-16-231 sshd-session[1863]: banner exchange: Connection from 198.211.115.98 port 42508: invalid format
+
+[3] Is Service Enabled on Boot?
+disabled
+
+Service monitor completed.

@@ -574,23 +574,40 @@ SSH Boot Status: enabled
 
 ### System Health Check
 
-![System Health Check](./screenshots/health-check.png)
+<img width="737" height="629" alt="Screenshot 1" src="https://github.com/user-attachments/assets/2a2b4265-0702-4d42-bbd0-be410214b3fe" />
+<img width="1313" height="277" alt="Screenshot 2" src="https://github.com/user-attachments/assets/6fa8418f-aa3b-4783-b0a2-a3eb6f2fd884" />
+
+
 
 ### Security Audit
 
-![Security Audit](./screenshots/security-audit.png)
+<img width="1810" height="501" alt="Screenshot 3" src="https://github.com/user-attachments/assets/8516fad9-beac-490e-b683-3fab9fec6ed7" />
+<img width="401" height="261" alt="Screenshot 4" src="https://github.com/user-attachments/assets/8384fd9e-3ad2-4fd3-af43-4d1aeeec64b1" />
+
+
 
 ### Network Diagnostic
 
-![Network Diagnostic](./screenshots/network-diagnostic.png)
+<img width="1066" height="581" alt="Screenshot 5" src="https://github.com/user-attachments/assets/6c6feca3-25c9-483a-a1a8-58144f601f9c" />
+<img width="798" height="564" alt="Screenshot 6" src="https://github.com/user-attachments/assets/a2f8e732-1f6b-41d2-b2d0-30145b0ee233" />
+<img width="1885" height="562" alt="Screenshot 7" src="https://github.com/user-attachments/assets/74f86238-3d9e-48f8-8f85-e8a606cf01c4" />
+<img width="1837" height="287" alt="Screenshot 8" src="https://github.com/user-attachments/assets/cc084d03-692f-48f0-9d33-1c9be563de27" />
+
+
+
+
 
 ### Service Monitor
 
-![Service Monitor](./screenshots/service-monitor.png)
+<img width="1887" height="517" alt="Screenshot 9" src="https://github.com/user-attachments/assets/001e2a62-4f0d-4797-a266-0671347e0283" />
+<img width="1908" height="572" alt="Screenshot 10" src="https://github.com/user-attachments/assets/3d5b1503-63d5-485f-8227-ece1ff894c2b" />
+
+
 
 ### Backup Report
 
-![Backup Report](./screenshots/backup-report.png)
+<img width="1267" height="538" alt="Screenshot 11" src="https://github.com/user-attachments/assets/b150a40d-a9e3-4d1c-a6ab-1c7981b6e1af" />
+
 
 ---
 
